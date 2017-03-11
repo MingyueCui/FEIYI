@@ -1,0 +1,190 @@
+label {
+	font-weight: normal;
+	font-size: 15px;
+}
+
+.form-btn {
+	cursor: pointer;	
+}
+
+.form-btn:hover, .form-btn:visited, .forbid-btn:hover, .forbid-btn:visited{
+	text-decoration: none;
+}
+
+.modal-header {
+  	border-bottom: none;
+  	font-size: 20px;
+  	font-weight: bolder;
+}
+
+.modal-body {
+  	padding: 20px;
+  	padding-left: 20px;
+  	padding-right: 20px;
+  	font-size: 14px;
+  	text-align: left;
+}
+
+.modal-footer {
+	border-top: none;
+	text-align: center;
+}
+
+.nav-tabs {
+	padding: 0px 20px;
+	margin-bottom: 20px;
+}
+
+table {
+	border: 1px solid #CECECE;
+}
+
+.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+	vertical-align: middle;
+	text-align: center;
+	border-top: none;
+}
+
+.pagination > li > a {
+	color: black;
+}
+
+#actContent {
+	resize:none;
+	width: 100%;
+	font-size: 14px;
+	height: 200px;
+}
+
+.radioInput {
+	line-height: 35px;
+}
+
+.title-lg {
+	padding-bottom: 30px;
+	color: rgb(123, 188, 228);
+	font-weight: bold;
+	font-size: 20px;
+	line-height: 35px;
+}
+
+.title-sm {
+	font-size: 25px;
+	font-weight: bolder;
+}
+
+
+.form-btn {
+	cursor: pointer;
+	color: rgb(112, 112, 112);
+	font-weight: bold;	
+}
+
+.form-btn:hover, .form-btn:visited {
+	text-decoration: none;
+	color: rgb(112, 112, 112);
+}
+
+.section > .container >.tool-row {
+	width: 100%;
+	background-color: white;
+	margin-bottom: 0px;
+	border: 1px solid #CECECE;
+	border-bottom: none;
+	padding-top: 20px;
+	
+}
+
+.shadow{  
+	filter:progid:DXImageTransform.Microsoft.Shadow(color=#909090,direction=120,strength=4);/*ie*/  
+	-moz-box-shadow: 2px 2px 10px #CECECE;/*firefox*/  
+	-webkit-box-shadow: 2px 2px 10px #CECECE;/*safari或chrome*/  
+	box-shadow:2px 2px 10px #CECECE;/*opera或ie9*/  
+}  
+
+table > thead > tr > th {
+	background-color: rgb(246, 245, 250);
+	color: rgb(121, 121, 123);
+	height: 45px;
+}
+
+.sm-table > thead > tr > th {
+	background-color: rgb(204, 204, 204);
+	color: rgb(121, 121, 123);
+	height: 45px;
+}
+
+table > tbody > tr > td {
+	background-color: white;
+	color: rgb(121, 121, 123);
+	border: 1px solid rgb(217, 217, 217);
+}
+
+table > tbody > tr:hover >td {
+	background-color: rgb(237, 238, 240);
+	color: rgb(121, 121, 123);
+}
+
+label {
+	font-weight: normal;
+}
+
+.btn-default {
+	width: 100%;
+}
+
+.section > .container > .data-info {
+	margin: 0 0;
+}
+
+.container {
+	width: 100%;
+  	padding: 0 30px;
+  	margin-right: auto;
+  	margin-left: auto;
+  	padding-bottom: 0;
+}
+
+.col-md-12 {
+	padding: 0 0;
+}
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+	color: black;
+	border: none;
+    border-bottom-color: none; 
+	cursor: default; 
+	background-color: rgb(245, 244, 249);
+}
+
+.nav-tabs {
+  	border-bottom: none;
+  	font-size: 16px;
+  	padding: 0px 0px;
+  	display: inline;
+}
+
+.nav > li > a {
+  	display: inline;
+  	color: rgb(123, 188, 228);
+}
+
+.nav-tabs > li > a:hover {
+  	border-color: rgb(245, 244, 249); 
+}
+
+.nav > li > a:hover, .nav > li > a:focus {
+  	background-color: rgb(245, 244, 249);
+}
+
+.close {
+	position: relative;
+	bottom: 20px;
+}
+
+.modal-header {
+  	border-bottom: #CECECE;
+  	font-size: 20px;
+  	font-weight: normal;
+  	background-color: rgb(245, 244, 249);
+}

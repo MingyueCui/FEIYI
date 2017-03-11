@@ -1,0 +1,194 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script charset="utf-8" src="script/kindeditor-min.js"></script>
+    <script charset="utf-8" src="lang/zh_CN.js"></script>
+    <script type="text/javascript" src="script/jquery.min.js"></script>
+    <script type="text/javascript" src="script/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="themes/default/default.css" />
+    <link href="style/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="style/bootstrap.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="style/site.css">
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+    <title>文件管理</title>
+    <script>
+        KindEditor.ready(function(K) {
+            K.create('textarea[name="content"]', {
+                autoHeightMode : true,
+                afterCreate : function() {
+                    this.loadPlugin('autoheight');
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+<div class="navbar navbar-default navbar-static-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"><img src="images/logo.png" class="logo">美丽中文系统</a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar-ex-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="login.html">退出登录</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="left vertical-nav">
+    <ul>
+        <li class="home">
+            <a href="login.html">首页</a>
+        </li>
+        <li >
+            <a href="memberManage.html">二级用户管理</a>
+        </li>
+        <li>
+            <a href="rollNews.html">发布滚动新闻</a>
+        </li>
+        <li>
+            <a href="rollNewsStats.html">查看滚动新闻</a>
+        </li>
+        <li >
+            <a href="noticeManage.html">发布公告</a>
+        </li>
+        <li>
+            <a href="noticeStats.html">查看公告</a>
+        </li>
+        <li  class="active">
+            <a href="fileManage.html">上传文件</a>
+        </li>
+        <li >
+            <a href="fileStats.html">文件管理</a>
+        </li>
+        <li >
+            <a href="setAdmin.html">设置管理员</a>
+        </li>
+    </ul>
+</div>
+<div class="right">
+    <div class="container news-container">
+        <div class="row">
+            <div class="col-md-12">
+                <div id="myTabContent" class="tab-content news-content">
+                    <div class="tab-pane fade in active" id="new">
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <label for="title" class="control-label">文件名</label>
+                            </div>
+                            <div class="col-sm-6">
+                                <input class="form-control" id="title">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <label for="content" class="control-label">文件类型</label>
+                            </div>
+                            <div class="col-sm-4">
+                                <select class="form-control">
+                                    <option>资料</option>
+                                    <option>制度汇编</option>
+                                    <option>事务办理</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <label for="content" class="control-label">添加附件</label>
+                            </div>
+                            <div class="col-sm-4">
+                                <form>
+                                   <input type="file">
+                                </form>
+                            </div>
+                        </div>
+                        <div class="row btn-group-row">
+                            <div class="col-sm-2 col-sm-offset-2">
+                                <a href="#" class="btn btn-default blue-btn btn-width" data-toggle="modal" data-target="#save">保存</a>
+                            </div>
+                            <div class="col-sm-2">
+                                <a href="#" class="btn btn-default blue-btn btn-width" data-toggle="modal" data-target="#issue">发布</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal fade" id="save" tabindex="-1" role="dialog"
+                         aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"
+                                            aria-hidden="true">×
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    保存成功！请到草稿箱查看！
+                                </div>
+                                <div class="modal-footer">
+                                    <div class="row">
+                                        <div class="col-sm-3 col-sm-offset-2">
+                                            <button type="button" class="link btn btn-default btn-width blue-btn"
+                                                    data-dismiss="modal">
+                                                确定
+                                            </button>
+                                        </div>
+                                        <div class="col-sm-3 col-sm-offset-2">
+                                            <a href="#" class="link btn btn-default blue-btn" data-dismiss="modal" onClick="open_draft()">去草稿箱 > </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal fade" id="issue" tabindex="-1" role="dialog"
+                         aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" style="width:400px;">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"
+                                            aria-hidden="true">×
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    发布成功！
+                                </div>
+                                <div class="modal-footer">
+                                    <div class="row">
+                                        <div class="col-sm-4 col-sm-offset-4">
+                                            <button type="button" class="btn btn-default btn-width"
+                                                    data-dismiss="modal">
+                                                确定
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+<script type="text/javascript">
+    function open_draft(){
+        $('#myTab a[href="#drafts"]').tab('show')
+    }
+    function open_edit(){
+        $('#myTab a[href="#new"]').tab('show')
+    }
+</script>
+</html>

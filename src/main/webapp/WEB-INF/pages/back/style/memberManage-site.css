@@ -1,0 +1,145 @@
+.table {
+	text-align: center;
+}
+
+.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+	vertical-align:middle;
+}
+
+.table > thead > tr > th {
+	text-align: center;
+}
+
+.headPhoto {
+	width: 35px;
+	height: 35px;
+}
+
+.member-info {
+	text-align: center;
+}
+
+.row {
+	margin-top: 25px;
+}
+
+.pagination > li > a {
+	color: black;
+}
+
+.form-btn {
+	cursor: pointer;
+	color: rgb(112, 112, 112);
+	font-weight: bold;	
+}
+
+.form-btn:hover, .form-btn:visited {
+	text-decoration: none;
+	color: rgb(112, 112, 112);
+}
+
+.section > .container >.tool-row {
+	width: 100%;
+	background-color: white;
+	padding-right: -30px;
+	padding-top: 18px;
+	padding-top:-30px;
+	margin-top: 0px;
+	text-align: center;
+}
+
+.shadow{  
+	filter:progid:DXImageTransform.Microsoft.Shadow(color=#909090,direction=120,strength=4);/*ie*/  
+	-moz-box-shadow: 2px 2px 10px #CECECE;/*firefox*/  
+	-webkit-box-shadow: 2px 2px 10px #CECECE;/*safari或chrome*/  
+	box-shadow:2px 2px 10px #CECECE;/*opera或ie9*/  
+}  
+
+table > thead > tr > th {
+	background-color: rgb(246, 245, 250);
+	color: rgb(121, 121, 123);
+	height: 45px;
+}
+
+table > tbody > tr > td {
+	background-color: white;
+	color: rgb(121, 121, 123);
+	border: 1px solid rgb(217, 217, 217);
+}
+
+table > tbody > tr:hover >td {
+	background-color: rgb(237, 238, 240);
+	color: rgb(121, 121, 123);
+}
+
+.col-md-12 {
+	padding: 0 0px;
+}
+
+label {
+	font-weight: normal;
+}
+
+.btn-default {
+	width: 100%;
+}
+
+.fileUpload {
+    position: relative;
+    overflow: hidden;
+}
+ 
+.fileUpload input.upload {  position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+
+.modal-header {
+  	border-bottom: none;
+  	font-size: 20px;
+  	font-weight: bolder;
+}
+
+.modal-body {
+  	padding: 20px;
+  	padding-top: 0px;
+  	padding-left: 20px;
+  	padding-right: 20px;
+  	font-size: 14px;
+  	text-align: left;
+}
+
+.modal-footer {
+	border-top: none;
+	text-align: center;
+}
+
+.modal-body1 {
+  	padding: 30px;
+  	font-size: 20px;
+  	text-align: center;
+}
+
+.modal-footer {
+	border-top: none;
+	text-align: center;
+}
+
+.head {
+	width: 80px;
+	height: 80px;
+	position: absolute;
+	left: 480px;
+	top: 5px;
+}
+
+.info-row {
+	height: 15px;
+}

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script charset="utf-8" src="script/kindeditor-min.js"></script>
+    <script charset="utf-8" src="lang/zh_CN.js"></script>
+    <script type="text/javascript" src="script/jquery.min.js"></script>
+    <script type="text/javascript" src="script/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="themes/default/default.css" />
+    <link href="style/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="style/bootstrap.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+
+    <link rel="stylesheet" type="text/css" href="style/site.css">
+    <title>公告管理</title>
+    <script>
+        KindEditor.ready(function(K) {
+            K.create('textarea[name="content"]', {
+                autoHeightMode : true,
+                afterCreate : function() {
+                    this.loadPlugin('autoheight');
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+<div class="navbar navbar-default navbar-static-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"><img src="images/logo.png" class="logo">美丽中文系统</a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar-ex-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="login.html">退出登录</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="left vertical-nav">
+    <ul>
+        <li class="home">
+            <a href="login.html">首页</a>
+        </li>
+        <li >
+            <a href="memberManage.html">二级用户管理</a>
+        </li>
+        <li>
+            <a href="rollNews.html">发布滚动新闻</a>
+        </li>
+        <li>
+            <a href="rollNewsStats.html">查看滚动新闻</a>
+        </li>
+        <li >
+            <a href="noticeManage.html">发布公告</a>
+        </li>
+        <li class="active">
+            <a href="noticeStats.html">查看公告</a>
+        </li>
+        <li>
+            <a href="fileManage.html">上传文件</a>
+        </li>
+        <li >
+            <a href="fileStats.html">文件管理</a>
+        </li>
+        <li >
+            <a href="setAdmin.html">设置管理员</a>
+        </li>
+    </ul>
+</div>
+<div class="right">
+    <div class="container news-container">
+        <div class="row">
+            <div class="col-md-12">
+
+                <div id="myTabContent" class="tab-content news-content">
+                    <div class="tab-pane fade in active" id="posted">
+                        <div class="row tool-row shadow">
+                            <div class="col-md-12">
+                                <form class="form-horizontal" role="form">
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <div class="col-sm-5">
+                                                <label for="actname" class="control-label">公告标题：</label>
+                                            </div>
+                                            <div class="col-sm-7">
+                                                <input class="form-control" id="actname">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <div class="col-sm-6">
+                                                <label for="actReleaseTime" class="control-label">发布时间：</label>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <select class="form-control" id="actReleaseTime"></select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <button class="btn btn-default">查询</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="row newsList">
+                            <div class="col-md-12">
+                                <table class="table">
+                                    <thead>
+                                    <tr>
+                                        <th>公告标题</th>
+                                        <th>公告类型</th>
+                                        <th>公告发布状态</th>
+                                        <th>公告发布时间</th>
+                                        <th>操作</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr class="black">
+                                        <td>五一出游</td>
+                                        <td>类型</td>
+                                        <td>未处理</td>
+                                        <td>2016年6月16日<br/>00:54:57</td>
+                                        <td>
+                                            <a class="form-btn" href="">查看</a>
+                                            <a class="form-btn" href="noticeManage.html">编辑</a>
+                                            <a class="form-btn" data-toggle="modal" data-target="#success">发布</a>
+                                            <a class="form-btn" data-toggle="modal" data-target="#delete">下架</a></td>
+                                    </tr>
+                                    <tr class="green">
+                                        <td>五一出游</td>
+                                        <td>类型</td>
+                                        <td>已发布</td>
+                                        <td>2016年6月16日<br/>00:54:57</td>
+                                        <td>
+                                            <a class="form-btn" href="">查看</a>
+                                            <a class="form-btn" href="noticeManage.html">编辑</a>
+                                            <a class="form-btn" data-toggle="modal" data-target="#success">发布</a>
+                                            <a class="form-btn" data-toggle="modal" data-target="#delete">下架</a></td>
+                                    </tr>
+                                    <tr class="red">
+                                        <td>五一出游</td>
+                                        <td>类型</td>
+                                        <td>已下架</td>
+                                        <td>2016年6月16日<br/>00:54:57</td>
+                                        <td>
+                                            <a class="form-btn" href="">查看</a>
+                                            <a class="form-btn" href="noticeManage.html">编辑</a>
+                                            <a class="form-btn" data-toggle="modal" data-target="#success">发布</a>
+                                            <a class="form-btn" data-toggle="modal" data-target="#delete">下架</a></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                <div class="page">
+                                    <span class="page-show">1/5</span>
+                                    <input type="submit"  value="" class="next-btn">
+                                    <input class="page-input">
+                                    <button type="submit" class="page-btn">跳转</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal fade" id="delete" tabindex="-1" role="dialog"
+                         aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" style="width:400px;">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"
+                                            aria-hidden="true">×
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    下架成功！
+                                </div>
+                                <div class="modal-footer">
+                                    <div class="row">
+                                        <div class="col-sm-4 col-sm-offset-4">
+                                            <button type="button" class="btn btn-default btn-width"
+                                                    data-dismiss="modal">
+                                                确定
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal fade" id="success" tabindex="-1" role="dialog"
+                         aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"
+                                            aria-hidden="true">×
+                                    </button>
+                                </div>
+                                <div class="modal-body modal-body1">
+                                    发布成功！
+                                </div>
+                                <div class="modal-footer">
+                                    <div class="row">
+                                        <div class="col-sm-4 col-sm-offset-4">
+                                            <button type="button" class="btn btn-default btn-width"
+                                                    data-dismiss="modal">
+                                                确定
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+<script type="text/javascript">
+    function open_draft(){
+        $('#myTab a[href="#drafts"]').tab('show')
+    }
+    function open_edit(){
+        $('#myTab a[href="#new"]').tab('show')
+    }
+</script>
+</html>

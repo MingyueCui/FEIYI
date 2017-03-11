@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+   <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title>活动预约</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link href="css/theme.css" rel="stylesheet" type="text/css">
+
+</head>
+<body  style="font-size:18px;">
+		<div class="container" id="contact">
+      <div class="box1"></div>
+			<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">
+			<script>
+			function GetRequest() {
+				var url = location.search;
+			  var theRequest = new Object();
+				if (url.indexOf("?") != -1) {
+					var str = url.substr(1);
+					strs = str.split("&");
+					for(var i = 0; i < strs.length; i ++) {
+						theRequest[strs[i].split("=")[0]]=decodeURI(strs[i].split("=")[1]);
+					}
+				}
+				return theRequest;
+			}
+			var Request = new Object();
+			Request = GetRequest();
+			var title;
+			title=Request["id"];
+			document.write(title);
+			</script>
+			预约
+		</h3>
+	</div>
+	<div class="panel-body">
+		<div class="row color2" name="label" id="label" >
+			<div class="col-sm-12">
+				<div class="form-group left-inner-addon">
+					<span class="glyphicon glyphicon-user"></span>
+					<input name="name" type="text" class="form-control" id="input_name" placeholder="姓名">
+				</div>
+				<div class="form-group left-inner-addon">
+					<span class="glyphicon glyphicon-earphone"></span>
+					<input name="tel" type="text" class="form-control" id="input_tel" placeholder="联系方式">
+				</div>
+				<button  class="btn btn-primary " name="b1" id="b1" onclick="change()" >完成</button>
+			</div>
+		</div>
+		<span style="display:none" id="end" >	您已成功预约，我们会尽快和您联系。</span>
+  </div>
+</div>
+</div>
+</body>
+<script>
+function change(){
+	var pw1=0;
+	var pw2=0;
+	pw1=document.getElementById("input_name").value;
+	pw2=document.getElementById("input_tel").value;
+	if(pw1!=0 && pw2!=0){
+		if((/^1\d{10}$/.test(pw2))){
+			alert("预约成功");
+			var way1 =document.getElementById("end");
+			way1.style.display="block";
+			var way2 =document.getElementById("label");
+			way2.style.display="none";
+		}
+		else{
+			alert("请填写正确的联系方式");
+		}
+	}
+	else{
+		alert("请填写完整的联系方式");
+	}
+}
+</script>
+</html>

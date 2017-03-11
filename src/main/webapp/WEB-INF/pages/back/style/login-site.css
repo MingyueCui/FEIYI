@@ -1,0 +1,51 @@
+body {
+	background-image: url('../images/Background.png');
+	background-size: cover;
+	background-attachment:fixed;
+	color: white;
+
+}
+
+label {
+	color: black;
+}
+
+.panel-primary {
+	width: 450px;
+	height: 260px;
+	border-radius: 2px;
+	border-width: 10px;
+	border-color: rgb(21, 127, 201);
+	position: absolute;
+	left: 750px;
+	top: 50px;
+
+}
+
+.panel-heading {
+	text-align: center;
+	border-radius: 0px;
+	background-color: rgb(21, 127, 201);
+}
+
+.panel-primary > .panel-heading {
+  background-color: rgb(21, 127, 201);
+  border-color: rgb(21, 127, 201);
+}
+
+.passwordForget {
+	position: relative;
+	top: 8px;
+}
+
+.passwordForget:link, .passwordForget:hover, .passwordForget:visited {
+	text-decoration: none;
+}
+
+.title {
+	font-size: 35px;
+	font-weight: bold;
+	position: absolute;
+	top: 580px;
+	left: 50px;
+}

@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script type="text/javascript" src="script/jquery.min.js"></script>
+        <script type="text/javascript" src="script/bootstrap.min.js"></script>
+        <link href="style/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="style/bootstrap.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" type="text/css" href="style/site.css">
+        <link rel="stylesheet" type="text/css" href="style/memberManage-site.css">
+        <title>二级用户管理</title>
+        <script type="text/javascript">
+			document.getElementById("uploadBtn").onchange = function (){
+			    document.getElementById("uploadFile").value = this.value;
+			};
+		</script>
+    </head>
+    
+    <body>
+        <div class="navbar navbar-default navbar-static-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#"><img src="images/logo.png" class="logo">美丽中文系统</a>
+                </div>
+                <div class="collapse navbar-collapse" id="navbar-ex-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="login.html">退出登录</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="left vertical-nav">
+            <ul>
+                <li class="home">
+                    <a href="login.html">首页</a>
+                </li>
+                <li  class="active">
+                    <a href="memberManage.html">二级用户管理</a>
+                </li>
+                <li>
+                    <a href="rollNews.html">发布滚动新闻</a>
+                </li>
+                <li>
+                    <a href="rollNewsStats.html">查看滚动新闻</a>
+                </li>
+                <li >
+                    <a href="noticeManage.html">发布公告</a>
+                </li>
+                <li>
+                    <a href="noticeStats.html">查看公告</a>
+                </li>
+                <li>
+                    <a href="fileManage.html">上传文件</a>
+                </li>
+                <li >
+                    <a href="fileStats.html">文件管理</a>
+                </li>
+                <li >
+                    <a href="setAdmin.html">设置管理员</a>
+                </li>
+            </ul>
+        </div>
+        <div class="right">
+            <div class="section">
+                <div class="container tool-container">
+                    <div class="row tool-row shadow">
+                        <div class="col-md-12">
+                            <form class="form-horizontal" role="form">
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <div class="col-sm-5">
+                                            <label for="membername" class="control-label">姓名：</label>
+                                        </div>
+                                        <div class="col-sm-7">
+                                            <input class="form-control" id="membername">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <div class="col-sm-5">
+                                            <label for="membertel" class="control-label">手机：</label>
+                                        </div>
+                                        <div class="col-sm-7">
+                                            <input class="form-control" id="membertel">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-1">
+                                    <button type="submit" class="btn btn-default">查询</button>	
+                                </div>
+                                <div class="col-md-1">
+									<a class="btn btn-default blue-btn" data-toggle="modal" data-target="#import" >导入</a>
+								</div>
+                                <div class="col-md-2">
+                                    <button type="submit" class="btn btn-default blue-btn">导出列表编辑信息</button>
+                                </div>
+                                <div class="col-md-2">
+                                    <button type="submit" class="btn btn-default blue-btn">下载模板</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="row member-info">
+                        <div class="col-md-12 table-col">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>工号</th>
+                                        <th>操作</th>
+                                        <th>手机号</th>
+                                        <th>姓名</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>11111</td>
+                                        <td>
+                                            <a class="form-btn" data-toggle="modal" data-target="#examine" >查看</a>
+                                            <a class="form-btn" data-toggle="modal" data-target="#edit" >编辑</a>
+                                            <a class="form-btn" data-toggle="modal" data-target="#delete" >删除</a>
+                                        </td>
+                                        <td>13502362354</td>
+                                        <td>周杰伦</td>
+                                    </tr>
+                                    <tr>
+                                        <td>11111</td>
+                                        <td>
+                                            <a class="form-btn" data-toggle="modal" data-target="#examine" >查看</a>
+                                            <a class="form-btn" data-toggle="modal" data-target="#edit" >编辑</a>
+                                            <a class="form-btn" data-toggle="modal" data-target="#delete" >删除</a>
+                                        </td>
+                                        <td>13502362354</td>
+                                        <td>周杰伦</td>
+                                    </tr>
+                                    <tr>
+                                        <td>11111</td>
+                                        <td>
+                                            <a class="form-btn" data-toggle="modal" data-target="#examine" >查看</a>
+                                            <a class="form-btn" data-toggle="modal" data-target="#edit" >编辑</a>
+                                            <a class="form-btn" data-toggle="modal" data-target="#delete" >删除</a>
+                                        </td>
+                                        <td>13502362354</td>
+                                        <td>周杰伦</td>
+                                    </tr>
+                                    <tr>
+                                        <td>11111</td>
+                                        <td>
+                                            <a class="form-btn" data-toggle="modal" data-target="#examine" >查看</a>
+                                            <a class="form-btn" data-toggle="modal" data-target="#edit" >编辑</a>
+                                            <a class="form-btn" data-toggle="modal" data-target="#delete" >删除</a>
+                                        </td>
+                                        <td>13502362354</td>
+                                        <td>周杰伦</td>
+                                    </tr>
+                                    <tr>
+                                        <td>11111</td>
+                                        <td>
+                                            <a class="form-btn" data-toggle="modal" data-target="#examine" >查看</a>
+                                            <a class="form-btn" data-toggle="modal" data-target="#edit" >编辑</a>
+                                            <a class="form-btn" data-toggle="modal" data-target="#delete" >删除</a>
+                                        </td>
+                                        <td>13502362354</td>
+                                        <td>周杰伦</td>
+                                    </tr>
+                                    <tr>
+                                        <td>11111</td>
+                                        <td>
+                                            <a class="form-btn" data-toggle="modal" data-target="#examine" >查看</a>
+                                            <a class="form-btn" data-toggle="modal" data-target="#edit" >编辑</a>
+                                            <a class="form-btn" data-toggle="modal" data-target="#delete" >删除</a>
+                                        </td>
+                                        <td>13502362354</td>
+                                        <td>周杰伦</td>
+                                    </tr>
+                                    <tr>
+                                        <td>11111</td>
+                                        <td>
+                                            <a class="form-btn" data-toggle="modal" data-target="#examine" >查看</a>
+                                            <a class="form-btn" data-toggle="modal" data-target="#edit" >编辑</a>
+                                            <a class="form-btn" data-toggle="modal" data-target="#delete" >删除</a>
+                                        </td>
+                                        <td>13502362354</td>
+                                        <td>周杰伦</td>
+                                    </tr>
+                                    <tr>
+                                        <td>11111</td>
+                                        <td>
+                                            <a class="form-btn" data-toggle="modal" data-target="#examine" >查看</a>
+                                            <a class="form-btn" data-toggle="modal" data-target="#edit" >编辑</a>
+                                            <a class="form-btn" data-toggle="modal" data-target="#delete" >删除</a>
+                                        </td>
+                                        <td>13502362354</td>
+                                        <td>周杰伦</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="page">
+                                <span class="page-show">1/5</span>
+                                <input type="submit"  value="" class="next-btn">  
+                                <input class="page-input">
+                                <button type="submit" class="page-btn">跳转</button>
+                            </div>
+                            <div class="modal fade" id="examine" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		                        <div class="modal-dialog">
+		                            <div class="modal-content">
+		                                <div class="modal-header">
+		                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+		                                </div>
+		                                <div class="modal-body" style="margin-bottom:20px;">
+
+		    								<div class="row info-row">
+		                                        <div class="col-sm-3">
+		                                            <label for="num" class="control-label">工号：</label>
+		                                        </div>
+		                                        <div class="col-sm-9">
+		                                            <label id="num">001</label>
+		                                        </div>
+		                                    </div>
+		                                    <div class="row info-row">
+		                                        <div class="col-sm-3">
+		                                            <label for="name" class="control-label">姓名：</label>
+		                                        </div>
+		                                        <div class="col-sm-9">
+		                                            <label id="name">张三</label>
+		                                        </div>
+		                                    </div>
+		                                    <div class="row info-row">
+		                                        <div class="col-sm-3">
+		                                            <label for="mp">手机号：</label>
+		                                        </div>
+		                                        <div class="col-sm-9">
+		                                            <label id="mp">15322264526</label>
+		                                        </div>
+		                                    </div>
+		                                </div>
+		                            </div>
+		                        </div>
+		                    </div>
+                            <div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                        </div>
+                                        <div class="modal-body" style="margin-bottom:20px;">
+                                            <div class="row info-row">
+                                                <div class="col-sm-3">
+                                                    <label for="num" class="control-label">工号：</label>
+                                                </div>
+                                                <div class="col-sm-9">
+                                                    <input id="num" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="row info-row">
+                                                <div class="col-sm-3">
+                                                    <label for="name" class="control-label">姓名：</label>
+                                                </div>
+                                                <div class="col-sm-9">
+                                                    <input id="name" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="row info-row">
+                                                <div class="col-sm-3">
+                                                    <label for="mp">手机号：</label>
+                                                </div>
+                                                <div class="col-sm-9">
+                                                    <input id="mp" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <div class="row">
+                                                    <div class="col-sm-4 col-sm-offset-4">
+                                                        <button type="button" class="btn btn-default btn-width blue-btn" 
+                                                        data-dismiss="modal">保存</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+		                    <div class="modal fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		                        <div class="modal-dialog">
+		                            <div class="modal-content">
+		                                <div class="modal-header modal-header1">
+		                                    <button type="button" class="close" data-dismiss="modal" 
+		                                    aria-hidden="true">×</button>
+		                                </div>
+		                                <div class="modal-body modal-body1">删除成功！</div>
+		                                <div class="modal-footer">
+		                                    <div class="row">
+		                                        <div class="col-sm-4 col-sm-offset-4">
+		                                            <button type="button" class="btn btn-default btn-width blue-btn" 
+		                                            data-dismiss="modal">确定</button>
+		                                        </div>
+		                                    </div>
+		                                </div>
+		                            </div>
+		                        </div>
+		                    </div>
+		                    <div class="modal fade" id="import" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		                        <div class="modal-dialog">
+		                            <div class="modal-content">
+		                                <div class="modal-header modal-header1">
+		                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+		                                </div>
+		                                <div class="modal-body">
+                                            <form>
+                                                <input type="file">
+                                            </form>
+
+
+
+
+
+
+		                                	
+		                                </div>
+		                            </div>
+		                        </div>
+		                    </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>
